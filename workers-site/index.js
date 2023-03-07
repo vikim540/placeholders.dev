@@ -31,7 +31,7 @@ const addHeaders = {
 		"default-src 'self';",
 		"script-src 'self' cdnjs.cloudflare.com static.cloudflareinsights.com;",
 		"style-src 'self' cdnjs.cloudflare.com 'unsafe-inline' fonts.googleapis.com;",
-		"img-src 'self' data: images.placeholders.dev;",
+		"img-src 'self' data: placeholderimgs.cmer.eu.org;",
 		"child-src 'none';",
 		"font-src 'self' fonts.gstatic.com cdnjs.cloudflare.com;",
 		"connect-src 'self';",
@@ -68,7 +68,7 @@ async function handleEvent(event){
 	const cache = caches.default; // Cloudflare edge caching
 	// when publishing to prod, we serve images from an `images` subdomain
 	// when in dev, we serve from `/api`
-	if(url.host === 'images.placeholders.dev' || url.pathname.startsWith('/api')){
+	if(url.host === 'placeholderimgs.cmer.eu.org' || url.pathname.startsWith('/api')){
 		// do our API work
 		let response = await cache.match(url, {ignoreMethod: true}); // try to find match for this request in the edge cache
 		if(response){
