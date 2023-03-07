@@ -1,6 +1,6 @@
 name = "placeholders-dev"
 workers_dev = true
-compatibility_date = "2022-04-22"
+compatibility_date = "2023-03-07"
 main = "./workers-site/index.js"
 node_compat = true
 
@@ -16,7 +16,7 @@ node_compat = true
 name = "placeholders"
 workers_dev = false
 routes = [
-	{pattern = "placeholders.dev/*", zone_id = "f5d4e94cb23f69f8ae69baedff94f2ba"},
-	{pattern = "images.placeholders.dev/*", zone_id = "f5d4e94cb23f69f8ae69baedff94f2ba"}
+	{pattern = "placeholders.cmer.eu.org/*", zone_id = "f5d4e94cb23f69f8ae69baedff94f2ba"},
+	{pattern = "placeholderimgs.cmer.eu.org/*", zone_id = "f5d4e94cb23f69f8ae69baedff94f2ba"}
 ]
 node_compat = true
